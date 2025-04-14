@@ -1,0 +1,27 @@
+<div class="cake-wrapper">
+    <div class="cake-container">
+      <div class="birthday-banner">
+        <span>Happy Birthday Tzoutzouliiiii</span>
+      </div>
+  
+      <div class="cake">
+        <!-- Frosting -->
+        <div class="frosting"></div>
+  
+        <!-- Heart -->
+        <div class="heart">&#10084;</div>
+  
+        <!-- Candles -->
+        <div class="candles">
+          <div class="candle" *ngFor="let pos of candlePositions" [style.left.px]="pos">
+            <div class="flame" *ngIf="flameVisible"></div> <!-- Flames should appear here -->
+            <div class="stick"></div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Birthday music -->
+      <audio #birthdayAudio src="happy-birthday-323162.mp3"></audio>
+    </div>
+  </div>
+  

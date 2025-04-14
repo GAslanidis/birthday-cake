@@ -1,0 +1,135 @@
+.cake-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ffeef2;
+  }
+  
+  .cake-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Birthday Banner */
+.birthday-banner {
+    background: linear-gradient(145deg, #ff5c93, #ff8ab7); /* Gradient background */
+    color: white;
+    padding: 25px 40px;
+    font-size: 36px; /* Slightly larger font */
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50px; /* Rounded corners for the banner */
+    margin-bottom: 190px; /* Adds space between the banner and the cake */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    z-index: 5;
+    position: relative;
+  }
+  
+  /* Adding a little sparkle on hover (optional) */
+  .birthday-banner:hover {
+    animation: sparkle 0.5s ease-out;
+  }
+  
+  @keyframes sparkle {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .cake {
+    width: 350px;  /* Increased width */
+    height: 200px; /* Increased height */
+    background: #e09191;
+    border-radius: 20px 20px 10px 10px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: visible; /* Keep candles visible */
+    z-index: 0;
+  }
+  
+  /* Frosting with melting effect */
+  .frosting {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border-radius: 30% 30% 0 0;
+    z-index: 1;
+    background-image: radial-gradient(circle at 20px 40px, #fff 20px, transparent 21px),
+                      radial-gradient(circle at 60px 35px, #fff 20px, transparent 21px),
+                      radial-gradient(circle at 100px 40px, #fff 20px, transparent 21px),
+                      radial-gradient(circle at 160px 30px, #fff 20px, transparent 21px),
+                      radial-gradient(circle at 200px 42px, #fff 20px, transparent 21px);
+    background-repeat: no-repeat;
+    background-size: 350px 45px;
+  }
+  
+  /* Larger Heart */
+  .heart {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 200px; /* Larger heart */
+    color: #ff5c93;
+    z-index: 3;
+  }
+  
+  /* Candles on top of the frosting */
+  .candles {
+    position: absolute;
+    top: -70px; /* Adjust candles to be just above the frosting */
+    left: 25px;
+    width: 100%;
+    height: 60px;
+    z-index: 2; /* Ensure candles are visible above the frosting */
+  }
+  
+  .candle {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stick {
+    width: 25px;  /* Increased width */
+    height: 70px; /* Increased height */
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .flame {
+    width: 24px; /* Increased width */
+    height: 40px; /* Increased height */
+    background: radial-gradient(circle at 30% 30%, #ff0, orange, red);
+    border-radius: 50%;
+    margin-bottom: 0px;
+    animation: flicker 0.3s infinite alternate, rise 2s ease-in-out infinite;
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.8);
+  }
+  
+  /* Flame animation */
+  @keyframes flicker {
+    0% { transform: scale(1) rotate(0deg); opacity: 1; }
+    100% { transform: scale(1.1) rotate(10deg); opacity: 0.7; }
+  }
+  
+  @keyframes rise {
+    0% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(0); }
+  }
+  
